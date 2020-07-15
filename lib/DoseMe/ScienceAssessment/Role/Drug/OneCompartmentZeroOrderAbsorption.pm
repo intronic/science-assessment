@@ -34,7 +34,8 @@ C(t) = ____ . __ . (1 - e^ −k(t − t_D)   | if t - t_D <= Tinf
 
      = 0                   | if t < tD
 
-     and D / Tinf = Dose Rate = k0
+     and D / Tinf = Dose Rate = dose k0
+
 Non-saturable kinetics assumed.
 
 =cut
