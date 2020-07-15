@@ -60,9 +60,9 @@ While the PFIM library is written for R and not perl, it provides a handy refere
         * multi dose is just a sum of all single doses that have been fully or partially dosed at time _t_ (given the assumptions anyway) (obvious in hindsight...)
 
 * Next was implement the single dose step and put in some tests
-    * see `t/10singledose.t` with some heuristic guesses for reasonable conc. ranges
+    * see `t/10singledose.t` with some heuristics for reasonable conc. ranges
 * Next was implement the multi-dose step and add tests
-    * see `t/10multidose.t` with more heuristics guesses
+    * see `t/20multidose.t` with more heuristics
 * Finally run the program and review the output file to verify the concentration goes up and down as roughly expected on the time points
 
 My lasting impression was _wow, this just looks like a dive computer_ calculating blood nitrogen concentration in mulitple tissue compartments, increasing as you descend and decreasing as you ascend... with tunable parameters before the dive... hmmm a wearable device could be interesting twist to the DoseMe product line...
