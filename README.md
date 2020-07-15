@@ -46,6 +46,9 @@ While the PFIM library is written for R and not perl, it provides a handy refere
 * First step was read the PDF
 * Second step was thinking _easy i'll just read through the R code_ and I can use that for validation testing, so I downloaded that
     * _Hmm well that was some ugly R code_
+        * formula as string, with parameter values (unsafely) concatenated in
+        * string evaluated (unsafely) at run-time as an expression
+        * some sort of eval/apply LISPy ideas but not what you'd want as a medical device
     * but the formulas are straight forward so I think I'll just dive in and do it...
 * Next was chose the elimination process
     * linear seemed good enough
