@@ -28,3 +28,15 @@ A starting point cpanfile is provided. You do not need to use all of the include
 While the PFIM library is written for R and not perl, it provides a handy reference of pharmacokinetic terms, concept and formulae in Chapter 1
 
 [Duboi, A, Bertrand, J, and Mentre, F. (2014) _PFIM 4.0 Library of Model._ PFIM Group. `http://www.pfim.biostat.fr/PFIM_PKPD_Library4.0.pdf`](http://www.pfim.biostat.fr/PFIM_PKPD_Library4.0.pdf)
+
+
+## Mike Pheasant: Notes
+
+* Any divers at DoseMe?
+    * This looks like a dive computer...could turn product into a wearable device...
+
+* Implemented:
+    * Linear elimination
+    * Single compartment
+    * Multiple doses (infusion)
+    * Equations 1.4 & 1.5, section 1.2.1.2 from PDF

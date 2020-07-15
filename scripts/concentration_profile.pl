@@ -25,6 +25,8 @@ my $exampilin_model = DoseMe::ScienceAssessment::Exampillin->new(
 # sampling every 5 minutes
 
 print "time,concentration\n";
+
+# * over 48 hours
 for(my $time = 0; $time <= 48; $time += 5/60) {
     my $concentration = $exampilin_model->plasma_concentration_at_time($time);
     print "$time,$concentration\n";
