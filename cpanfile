@@ -14,6 +14,7 @@ on 'test' => sub {
   requires "Test::More" => "0";
   requires "Test::Pod" => "1.41";
   requires "Pod::Coverage" => "0.20";
+  requires "Test::Pod::Coverage" => "1.04";
 };
 
 on 'configure' => sub {
