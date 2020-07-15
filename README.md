@@ -40,3 +40,29 @@ While the PFIM library is written for R and not perl, it provides a handy refere
     * Single compartment
     * Multiple doses (infusion)
     * Equations 1.4 & 1.5, section 1.2.1.2 from PDF
+
+## Mike Pheasant: Thought Process
+
+* First step was read the PDF
+* Second step was thinking _easy i'll just read through the R code_ and I can use that for validation testing, so I downloaded that
+    * _Hmm well that was some ugly R code_
+    * but the formulas are straight forward so I think I'll just dive in and do it...
+* Next was chose the elimination process
+    * linear seemed good enough
+* Next was the route of administration
+    * Infusion seemed most appropriate
+* Next was review the formulae again (Section 1.2.1.2)
+    * eq. 1.4 for single dose
+    * eq. 1.5 for multiple
+    * Thoughts here:
+        * single dose is just a term for the _in-dose_ or _post-dose_ time steps
+        * I added the _pre-dose_ 0 concentration case for ease & safety of coding also
+        * multi dose is just a sum of all single doses that have been fully or partially dosed at time _t_ (given the assumptions anyway) (obvious in hindsight...)
+
+* Next was implement the single dose step and put in some tests
+    * see `t/10singledose.t` with some heuristic guesses for reasonable conc. ranges
+* Next was implement the multi-dose step and add tests
+    * see `t/10multidose.t` with more heuristics guesses
+* Finally run the program and review the output file to verify the concentration goes up and down as roughly expected on the time points
+
+My lasting impression was _wow, this just looks like a dive computer_ calculating blood nitrogen concentration in mulitple tissue compartments, increasing as you descend and decreasing as you ascend... with tunable parameters before the dive... hmmm a wearable device could be interesting twist to the DoseMe product line...
